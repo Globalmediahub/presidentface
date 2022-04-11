@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        />
+
+        <title>내가 왕이될 상인가?</title>
+        <meta name="subject" content="얼굴로 보는 인공지능 대통령상 테스트, 내가 닮은 대통령을 찾아보세요!">
+        <meta name="keywords" content="나랑 닮은 대통령 테스트, 인공지능 대통령상 테스트, 얼굴상, 얼굴상 테스트, 나와 닮은 대통령, 대통령 찾기, 얼굴로 보는 대통령상, 이승만, 최규하, 박정희, 윤보선, 전두환, 노태우, 김영삼, 김대중, 노무현, 이명박, 박근혜, 문재인, 윤석열, 인공지능 대통령, AI 얼굴상, AI 대통령, AI 대통령상">
+        <meta name="author" content="GlobalMediaHub">
+        <link rel="stylesheet" href="style.css" />
+        
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6253e51a4750b6fa"></script>
+
+
+    </head>
+
+    <style>
+         #label-container div:nth-child(6) {display:none !important;}
+         #label-container div:nth-child(7) {display:none !important;}
+         #label-container div:nth-child(8) {display:none !important;}
+         #label-container div:nth-child(9) {display:none !important;}
+         #label-container div:nth-child(10) {display:none !important;}
+         #label-container div:nth-child(11) {display:none !important;}
+         #label-container div:nth-child(12) {display:none !important;}
+         #label-container div:nth-child(13) {display:none !important;}
+         #label-container div:nth-child(14) {display:none !important;}
+      </style>
+    
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light nav-distance">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">나랑닮은대통령</a>
+                <button
+                    class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">내가왕이될상인가</a>
+                        </li>
+                     </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="section">
+            <h1 class="title">내가 왕이 될 상인가?</h1>
+            <h2 class="subtitle">나는 어떤 대통령과 닮았을까?</h2>
+        </section>
+        <section class="youtube">
+        <div class="container mt-3 youtube-cover d-flex flex-row-reverse align-items-center">
+                <img src="image/logo.jpg" alt="https://okky.kr/article/311740" class="youtube-icon" />
+                <a href="" class="youtube-link">미디어웍스유튜브</a>
+            </div>
+        </section>
+
+        <!-- <div>Teachable Machine Image Model</div> -->
+
+        <!-- <button type="button" onclick="init()">Start</button> -->
+        <!-- <button type="button" onclick="predict()">예측</button> -->
+
+        <script
+            class="jsbin"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" ></script>
+      
+        <div class="mt-3 container file-upload">
+            <!-- <button
+                class="file-upload-btn"
+                type="button"
+                onclick="$('.file-upload-input').trigger( 'click' )"
+            >
+                Add Image
+            </button> -->
+
+            <div class="image-upload-wrap" >
+                <input
+                    class="file-upload-input"
+                    type="file"
+                    onchange="readURL(this);"
+                    accept="image/*"
+                />
+                <div class="drag-text">
+                    <img src="image/arrow.png" class="mt-5 pt-5 upload" />
+                    <h3 class="mb-5 pb-5 pt-4 upload-text">얼굴 사진을 올려놓거나 눌러서 업로드하세요!</h3>
+                </div>
+            </div>
+            
+            <div class="file-upload-content">
+                <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+                  <div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <p class="text-center">AI가 당신의 얼굴을 분석중입니다.</p>
+            </div>              
+                <p class="result-message"></p>
+                <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+                <div id="addThis" class="addthis_inline_share_toolbox_6lz1"></div>
+             
+                
+
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox_f6xr"></div>
+            
+            
+                
+                <div class="pt-3 image-title-wrap">
+                    <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
+                        <span class="try-again-text">다른 사진으로 재시도</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <footer class="footer pt-5 container d-flex justify-content-center">
+        <div>
+            <p>&copy; GlobalMediaHub 2022. All Rights Reserved.</p>
+        </div>
+    </footer>
+        
+        
+        <!-- <div id="webcam-container"></div>
+
+        <div id="label-container"></div>
+        <div id="disqus_thread"></div> -->
+        
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+            (function () {
+                // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://mediahub-2.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript
+            >Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+        >
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"
+        ></script>
+
+
+
+        <script>
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.image-upload-wrap').hide();
+                        $('#loading').show();
+                        $('.file-upload-image').attr('src', e.target.result);
+                        $('.file-upload-content').show();
+
+                        $('.image-title').html(input.files[0].name);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                    init().then(function() {
+                        console.log('charles');
+                        predict();
+                        $('#loading').hide();
+                    });
+                } else {
+                    removeUpload();
+                }
+            }
+
+            function removeUpload() {
+                $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+                $('.file-upload-content').hide();
+                $('.image-upload-wrap').show();
+            }
+            $('.image-upload-wrap').bind('dragover', function () {
+                $('.image-upload-wrap').addClass('image-dropping');
+            });
+            $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+        </script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>        
+        
+
+        <script type="text/javascript">
+            // More API functions here:
+            // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+            // the link to your model provided by Teachable Machine export panel
+
+            const URL = 'https://teachablemachine.withgoogle.com/models/1oA9vssrT/';
+            let model, webcam, labelContainer, maxPredictions;
+
+            // Load the image model and setup the webcam
+            async function init() {
+                const modelURL = URL + 'model.json';
+                const metadataURL = URL + 'metadata.json';
+
+                // load the model and metadata
+                // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+                // or files from your local hard drive
+                // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+                model = await tmImage.load(modelURL, metadataURL);
+                maxPredictions = model.getTotalClasses();
+                labelContainer = document.getElementById('label-container');
+                for (let i = 0; i < maxPredictions; i++) {
+                    // and class labels
+                    var element = document.createElement("div")
+                    element.classList.add("d-flex");
+                    labelContainer.appendChild(element);
+                }
+                
+
+            }
+
+            // run the webcam image through the image model
+            async function predict() {
+                // predict can take in an image, video or canvas html element
+                var image = document.getElementById('face-image');
+                const prediction = await model.predict(image, false);
+                prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+                console.log(prediction[0].className);
+                
+                
+                
+                var resultTitle, resultMessage, resultCaution;
+                switch (prediction[0].className) {
+                    case 'YoonSY':
+                        resultTitle = '강한남자 윤석열';
+                        resultMessage =
+                            '고진감래라고 했다. 사법고시 합격을 위해 9수까지 하는 고생을 했지만, 그 인고의 시간을 지나 검찰총장, 대통령까지 당선된 윤석열';
+                        resultCaution = '자칫 내부 반란으로 한방에 훅 갈 수 있다';
+                        // code block
+                        break;
+                    case 'MoonJI':
+                        resultTitle = '외유내강 문재인';
+                        resultMessage =
+                            '22년 대한민국은 G9을 넘어 세계적인 1등 국가로 가고 있다. 그 초석을 다진 문재인';
+                        resultCaution = '사람을 잘못써서 고생할 수 있음. 예: 렬이';
+                        break;
+                    case 'ParkKH':
+                        resultTitle = '승부사 박근혜';
+                        resultMessage =
+                            '그녀의 삶은 승부 그 자체였다. 아버지의 뒤를 잇기위해 그게 던진 승부수는 최XX이라는 사람등에 업힌것';
+                        resultCaution = '무리한 승부수는 망조의 지름길이다.';
+                        break;
+                    case 'LeeMB':
+                        resultTitle = '돈버는 거상 이명박';
+                        resultMessage =
+                            '어려웠던 유년기를 보냈지만 돈에대한 집녑은 막을 수 없다. 태어나기를 영특하게 태어났기에 돈의 거상이 되었다';
+                        resultCaution = '자기 잘난맛에 살기에 주변에 친구가 적다';
+                        break;
+                    case 'NohMH':
+                        resultTitle = '사람좋은 노무현';
+                        resultMessage =
+                            '항상 남을 먼저 생각하는 노무현, 이래서 사람들이 바보노무현이라고 하나보다. 하지만, 그의 진심을 알게되었을 때 모든 사람들이 그릴 칭송하지 않을 수 없게되었다.';
+                        resultCaution = '주변에서 너무 만만하게 보는 경향이 있음';
+                        break;
+                    case 'KimDJ':
+                        resultTitle = '평화를 사랑한 김대중';
+                        resultMessage =
+                            '전라도의 영원한 멘토 김대중. 한국 정치사에 큰획을 그은 거물 정치인으로 영호남의 지역주의 타파, 북한과의 평화공조를 위해 한평생을 다 바쳤다.';
+                        resultCaution = '특정 세력에 편중된 인기를 가질 수 있음';
+                        break;
+
+                    case 'KimYS':
+                        resultTitle = '꿈이 대통령이었던 김영삼';
+                        resultMessage =
+                            '꿈은 이루어진다고 했던가.. 당신도 무언가를 꿈꾸고 계속 정진한다면 그 꿈을 실현할 수 있을 것이다.';
+                        resultCaution = 'IMF의 장본인 ㅠㅠ';
+                        break;
+
+                    case 'NohTW':
+                        resultMessage = '두환이 친구';
+                        break;
+
+                    case 'JeonDH':
+                        resultMessage = '탱크로 밀어버려';
+                        break;
+
+                    case 'ChoiKH':
+                        resultMessage = '잠시 지난간 이';
+                        break;
+
+                    case 'ParkJH':
+                        resultMessage = '날래날래 움직이라우';
+                        break;
+
+                    case 'YoonBS':
+                        resultMessage = '난 오래하고 싶었어';
+                        break;
+
+                    case 'LeeSM':
+                        resultMessage = '내가 김구를 제낀 놈이야';
+                        break;
+
+                    default:
+                        resultTitle = '알수없음';
+                        resultMessage ='';
+                        resultCaution = '';
+                }
+
+                var title = "<div class='" + prediction[0].className +"-president-title'>" + resultTitle +"</div>"
+                var Message = "<div class='president-message pt-2'>" + resultMessage + "</div>"
+                var Caution = "<div class='" + prediction[0].className + "-president-caution pt-2 pb-2'>" + resultCaution + "</div>"
+                $('.result-message').html(title + Message + Caution);
+                var barWidth;           
+                
+// 5개만 보이게 좀 해보자
+                 // if (prediction[0].probability.toFixed(2) > 0.1) {
+                 //      barWidth = Math.round(prediction[0].probability.toFixed(2) * 100) + "%";
+                 //  } else if (prediction[0].probability.toFixed(2) >= 0.01) {
+                 //      barWidth = "4%"
+                 //  } else {
+                 //      barWidth = "2%"
+                 //  }
+                 // if (prediction[1].probability.toFixed(2) > 0.1) {
+                 //      barWidth = Math.round(prediction[1].probability.toFixed(2) * 100) + "%";
+                 //  } else if (prediction[1].probability.toFixed(2) >= 0.01) {
+                 //      barWidth = "4%"
+                 //  } else {
+                 //      barWidth = "2%"
+                 //  }
+                 // if (prediction[2].probability.toFixed(2) > 0.1) {
+                 //      barWidth = Math.round(prediction[2].probability.toFixed(2) * 100) + "%";
+                 //  } else if (prediction[2].probability.toFixed(2) >= 0.01) {
+                 //      barWidth = "4%"
+                 //  } else {
+                 //      barWidth = "2%"
+                 //  }
+                 // if (prediction[3].probability.toFixed(2) > 0.1) {
+                 //      barWidth = Math.round(prediction[3].probability.toFixed(2) * 100) + "%";
+                 //  } else if (prediction[3].probability.toFixed(2) >= 0.01) {
+                 //      barWidth = "4%"
+                 //  } else {
+                 //      barWidth = "2%"
+                 //  }
+                 // if (prediction[4].probability.toFixed(2) > 0.1) {
+                 //      barWidth = Math.round(prediction[4].probability.toFixed(2) * 100) + "%";
+                 //  } else if (prediction[4].probability.toFixed(2) >= 0.01) {
+                 //      barWidth = "4%"
+                 //  } else {
+                 //      barWidth = "2%"
+                 //  }
+                             
+       // 여기까지 ----------- temp                                                         
+                
+                
+                 for (let i = 0; i < maxPredictions; i++) {
+                 if (prediction[i].probability.toFixed(2) > 0.1) {
+                      barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                  } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                      barWidth = "4%"
+                  } else {
+                      barWidth = "2%"
+                  }
+                
+                
+                
+                var labelTitle;
+                switch (prediction[i].className) {
+                    case 'YoonSY':
+                        labelTitle = "윤석열"
+                        break;
+                    case 'MoonJI':
+                        labelTitle = "문재인"
+                        break;
+                    case "ParkKH":
+                        labelTitle = "박근혜"
+                        break;
+                    case "LeeMB":
+                        labelTitle = "이명박"
+                        break;
+                    case "NohMH":
+                        labelTitle = "노무현"
+                        break;
+                    case "KimDJ":
+                        labelTitle = "김대중"
+                        break;
+                    case "KimYS":
+                        labelTitle = "김영삼"
+                        break;
+                    case "NohTW":
+                        labelTitle = "노태우"
+                        break;
+                    case "JeonDH":
+                        labelTitle = "전두환"
+                        break;
+                    case "ChoiKH":
+                        labelTitle = "최규하"
+                        break;
+                    case "ParkJH":
+                        labelTitle = "박정희"
+                        break;
+                    case "YoonBS":
+                        labelTitle = "윤보선"
+                        break;
+                    case "LeeSM":
+                        labelTitle = "이승만"
+                        break;
+                    default:
+                        labelTitle = "알수없음"
+                }
+                var label = "<div class='president-label d-flex align-items-center'>" + labelTitle + "</div>"
+                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                    // const classPrediction =
+                        // prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
+                                
+                labelContainer.childNodes[i].innerHTML = label + bar;
+                }
+            }
+        </script>
+    </body>
+
+    <!-- Copyright (c) 2022 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ -->
+</html>
