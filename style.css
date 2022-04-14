@@ -152,20 +152,22 @@ padding-right: 7.7%; */
     border-color: #ffffff;
 }
 .section {
-    margin-top: 100px;
+    margin-top: 5px;
 }
 .title {
     font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
     line-height: 1.67;
     text-align: center;
-    color: #35465d;
+    color: 	#000080;
 }
 .subtitle {
     font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
     line-height: 1.53;
     text-align: center;
-    color: #35465d;
-} /* On screens that are 600px or less, set the background color to olive */
+    color: #FF00FF;
+} 
+
+/* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
     html {
         font-size: 10px;
@@ -191,7 +193,8 @@ padding-right: 7.7%; */
     text-decoration: underline;
 }
 .youtube-icon {
-    width: 6%;
+    float: right;
+    width: 30%;
 }
 
 
@@ -610,3 +613,13 @@ label {
   border-radius: 30px;
   position: relative;
 }
+
+
+.bg_image_president{
+        height: 20vh;
+         border: 1px solid #cccccc;
+        background-image: url('https://cdn.kbmaeil.com/news/photo/202201/918090_910565_755.jpg');
+        background-repeat : no-repeat;
+        background-size : contain;
+        background-position: center center;
+      }

@@ -2,8 +2,8 @@
 <html>
     <head>
         <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit=no >
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!-- Bootstrap CSS -->
         <link
@@ -15,9 +15,9 @@
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-        <title>내가 왕이될 상인가?</title>
+        <title>나랑닮은대통령</title>
         <meta name="subject" content="얼굴로 보는 인공지능 대통령상 테스트, 내가 닮은 대통령을 찾아보세요!">
-        <meta name="keywords" content="나랑 닮은 대통령 테스트, 인공지능 대통령상 테스트, 얼굴상, 얼굴상 테스트, 나와 닮은 대통령, 대통령 찾기, 얼굴로 보는 대통령상, 이승만, 최규하, 박정희, 윤보선, 전두환, 노태우, 김영삼, 김대중, 노무현, 이명박, 박근혜, 문재인, 윤석열, 인공지능 대통령, AI 얼굴상, AI 대통령, AI 대통령상">
+        <meta name="keywords" content="나랑 닮은 대통령 테스트, 인공지능 대통령상 테스트, 얼굴상, 얼굴상 테스트, 나와 닮은 대통령, 대통령 찾기, 얼굴로 보는 대통령상, 이승만, 최규하, 박정희, 윤보선, 전두환, 노태우, 김영삼, 김대중, 노무현, 이명박, 박근혜, 문재인, 윤석열, 이승만얼굴, 최규하얼굴, 박정희얼굴, 윤보선얼굴, 전두환얼굴, 노태우얼굴, 김영삼얼굴, 김대중얼굴, 노무현얼굴, 이명박얼굴, 박근혜얼굴, 문재인얼굴, 윤석열얼굴,인공지능 대통령, AI 얼굴상, AI 대통령, AI 대통령상">
         <meta name="author" content="GlobalMediaHub">
         <meta name="description" content="대한민국 역대 대통령 사진데이터로 학습한 인공지능이 나랑 닮은 대통령을 찾아드려요. 사진 데이터는 어디에도 전송되지 않습니다. "/>
         <link rel="stylesheet" href="style.css" />
@@ -65,16 +65,22 @@
             </div>
         </nav>
 
-        <section class="section">
-            <h1 class="title">내가 왕이 될 상인가?</h1>
-            <h2 class="subtitle">나는 어떤 대통령과 닮았을까?</h2>
-        </section>
-        <section class="youtube">
-        <div class="container mt-3 youtube-cover d-flex flex-row-reverse align-items-center">
-                <img src="image/logo.jpg" alt="https://okky.kr/article/311740" class="youtube-icon" />
-                <a href="" class="youtube-link">미디어웍스유튜브</a>
+        <div class = "bg_image_president" style="border-top-width: 0px; border-bottom-width: 0px;margin-top: -20px; margin-bottom: -15px;">    </div>
+            
+      
+            <section class="section">
+            <h1 class="title">나는 어떤 대통령과 닮았을까?</h1>
+            <h2 class="subtitle">결과에 너무 좌절하진 마세요 </h2>
+            </section>
+     
+            
+            <section class="youtube">
+            <div class="container mt-3 youtube-cover d-flex flex-row-reverse align-items-center">
+            <a href="http://www.naver.com"><img src="image/poliground.png" alt="youtube-icon" class="youtube-icon" /> </a> 
+                <!-- <a href="http://naver.com" class="youtube-link">정치증권거래소</a> -->
             </div>
-        </section>
+            </section>
+     
 
         <!-- <div>Teachable Machine Image Model</div> -->
 
@@ -280,72 +286,79 @@
                 var resultTitle, resultMessage, resultCaution;
                 switch (prediction[0].className) {
                     case 'YoonSY':
-                        resultTitle = '강한남자 윤석열';
+                        resultTitle = '20대 대통령 당선자 윤석열';
                         resultMessage =
-                            '고진감래라고 했다. 사법고시 합격을 위해 9수까지 하는 고생을 했지만, 그 인고의 시간을 지나 검찰총장, 대통령까지 당선된 윤석열';
-                        resultCaution = '자칫 내부 반란으로 한방에 훅 갈 수 있다';
+                            '어록 : 저는 사람에 충성하지 않기 때문에 제가 오늘도 이런 말씀을 드리는 겁니다. 검사가 수사권 가지고 보복하면 그게 깡패지, 검사입니까?';
+                        resultCaution = '김건희, 건진법사, 장모 최은순, 한동훈 등의 리스크 존재';
                         // code block
                         break;
                     case 'MoonJI':
-                        resultTitle = '외유내강 문재인';
+                        resultTitle = '19대 대통령 문재인';
                         resultMessage =
-                            '22년 대한민국은 G9을 넘어 세계적인 1등 국가로 가고 있다. 그 초석을 다진 문재인';
-                        resultCaution = '사람을 잘못써서 고생할 수 있음. 예: 렬이';
+                            '어록 : 우리는 다시는 일본에게 지지 않을 것입니다. 과거에도 그래왔듯이 우리는 역경을 오히려 도약하는 기회로 만들어낼 것입니다.';
+                        resultCaution = '검찰총장 임명을 잘못한 것이 가장 큰 실수';
                         break;
                     case 'ParkKH':
-                        resultTitle = '승부사 박근혜';
-                        resultMessage =
-                            '그녀의 삶은 승부 그 자체였다. 아버지의 뒤를 잇기위해 그게 던진 승부수는 최XX이라는 사람등에 업힌것';
-                        resultCaution = '무리한 승부수는 망조의 지름길이다.';
+                        resultTitle = '18대 대통령 박근혜';
+                        resultMessage = '어록 : 저는 한마디로 통일은 대박이다 이렇게 생각을 합니다. 어둠을 탓하기보다는 촛불을 켜라.';
+                        resultCaution = '촛불을 켜라고 말이 씨가 되어 정말로 국민적 촛불이 켜졌음';
                         break;
                     case 'LeeMB':
-                        resultTitle = '돈버는 거상 이명박';
-                        resultMessage =
-                            '어려웠던 유년기를 보냈지만 돈에대한 집녑은 막을 수 없다. 태어나기를 영특하게 태어났기에 돈의 거상이 되었다';
-                        resultCaution = '자기 잘난맛에 살기에 주변에 친구가 적다';
+                        resultTitle = '17대 대통령 이명박';
+                        resultMessage = '어록 : 뭐, 도곡동 땅이 어떻다고요? BBK가 어떻다요? 새빨간 거짓말입니다. 여러분. 저는 그런 삶을 살아오지 않았습니다.';
+                        resultCaution = '도곡동 땅, BBK 소유가 실제로 밝혀져 곤혹을 치르고 있음';
                         break;
                     case 'NohMH':
-                        resultTitle = '사람좋은 노무현';
-                        resultMessage =
-                            '항상 남을 먼저 생각하는 노무현, 이래서 사람들이 바보노무현이라고 하나보다. 하지만, 그의 진심을 알게되었을 때 모든 사람들이 그릴 칭송하지 않을 수 없게되었다.';
-                        resultCaution = '주변에서 너무 만만하게 보는 경향이 있음';
+                        resultTitle = '16대 대통령 노무현';
+                        resultMessage = '어록 : 정치가 썩었다고 고개를 돌리지 마십시오. 낡은 정치를 새로운 정치로 바꾸는 힘은 국민 여러분에게 있습니다.';
+                        resultCaution = '삼가 고인의 명복을 빕니다.';
                         break;
                     case 'KimDJ':
-                        resultTitle = '평화를 사랑한 김대중';
-                        resultMessage =
-                            '전라도의 영원한 멘토 김대중. 한국 정치사에 큰획을 그은 거물 정치인으로 영호남의 지역주의 타파, 북한과의 평화공조를 위해 한평생을 다 바쳤다.';
-                        resultCaution = '특정 세력에 편중된 인기를 가질 수 있음';
+                        resultTitle = '15대 대통령 김대중';
+                        resultMessage = '어록 : 전쟁은 40대 이상의 장년층이 일으키고, 전쟁터에서는 20대가 죽는다. 앞으로 전쟁이 일어나면 40대 이상을 전선으로 보내자.(노무현 대통령 추모 연설 중에서)';
+                        resultCaution = '경기부양 방안으로 신용카드 활성화 정책시도, 결국은 카드대란 초래 ';
                         break;
 
                     case 'KimYS':
-                        resultTitle = '꿈이 대통령이었던 김영삼';
-                        resultMessage =
-                            '꿈은 이루어진다고 했던가.. 당신도 무언가를 꿈꾸고 계속 정진한다면 그 꿈을 실현할 수 있을 것이다.';
-                        resultCaution = 'IMF의 장본인 ㅠㅠ';
+                        resultTitle = '14대 대통령 김영삼';
+                        resultMessage = '어록 : 아무리 닭의 목을 비틀지라도 새벽이 온다고 우리는 믿었습니다! (1979년 10월 4일, 국회의원 제명 직후)';
+                        resultCaution = '대한민국이 세계 부자 대열에 낄줄 알았지만 실상은 IMF';
                         break;
 
                     case 'NohTW':
-                        resultMessage = '두환이 친구';
+                        resultTitle = '13대 대통령 노태우';
+                        resultMessage = '어록 : 대기업 위주로 경제를 운영하는 시대는 끝났다고 봅니다. 사실 대기업들은 정부지원을 많이 받았어요. 정부지원을 많이 받은 만큼 이를 사회에 환원시킬 시기가 아닌가 생각합니다. ' ;
+                        resultCaution = '공식 추산된 국고 비자금 횡령 액수 : 2,628억원';
                         break;
 
                     case 'JeonDH':
-                        resultMessage = '탱크로 밀어버려';
+                        resultTitle = '11~12대 대통령 전두환';
+                        resultMessage = '어록 : 돈을 받은 것은 사실이다. 내가 돈을 받지 않으니 기업인들이 되레 불안을 느꼈다. 기업인들은 내게 정치자금을 냄으로써 정치 안정에 기여하는 보람을 느꼈을 것이다. (1996년 2월 비자금 사건 첫 공판에서)';
+                        resultCaution = '대한민국 헌정사에서 정통성 및 정당성이 가장 부족한 독재 정권';
                         break;
 
                     case 'ChoiKH':
-                        resultMessage = '잠시 지난간 이';
+                        resultTitle = '10대 대통령 최규하';                        
+                        resultMessage = '어록 : 나만이라도 끝까지 연탄을 때겠다. (오일 파동 당시 장성탄광 시찰 후)';
+                        resultCaution = '대한민국 역사에서 가장 짧은 임기(8개월)를 지낸 대통령';
                         break;
 
                     case 'ParkJH':
-                        resultMessage = '날래날래 움직이라우';
+                        resultTitle = '5~9대 대통령 박정희';
+                        resultMessage = '어록 : 바르게 알도록 하고, 바르게 판단하도록 하고, 바르게 행동하도록 하는 무거운 책임이 바로 우리 언론에 있는 것입니다.';
+                        resultCaution = '정권 연장을 위한 공포정치, 민주주의 파괴';
                         break;
 
                     case 'YoonBS':
-                        resultMessage = '난 오래하고 싶었어';
+                        resultTitle = '4대 대통령 윤보선';
+                        resultMessage = '어록 : 드디어 올것이 왔다! 5.16 쿠데타가 발생하자 윤보선대통령이 던진말로  4.19혁명이후에 당선된 문민 대통령이나, 후일 5.16쿠데타로 인해 대통령직에서 물러나게 된다';
+                        resultCaution = '경제적으로 무능하단 비판이 있으나, 존속 기간이 너무 짧아 평가 불가';
                         break;
 
                     case 'LeeSM':
-                        resultMessage = '내가 김구를 제낀 놈이야';
+                        resultTitle = '1~3대 대통령 이승만';
+                        resultMessage = '어록 : 모든 정치제도의 성패는 항상 그 나라 백성들의 수준에 달려있다. 굽어 자란 나뭇가지는 갑자기 펴지 못하고, 앉아서만 자란 아이는 하루에 멀리 가지 못한다.';
+                        resultCaution = '독립운동에 기여는 했으나, 친일파 청산을 방해 그 여파가 지금까지 ㅜ';
                         break;
 
                     default:
