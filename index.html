@@ -403,10 +403,10 @@
                 }
 
                 var title = "<div class='" + prediction[0].className +"-president-title'>" + resultTitle +"</div>"
-                var title = "<div class='" + prediction[0].className +"-president-Analects'>" + resultAnalects +"</div>"
+                var Analects = "<div class='" + prediction[0].className +"-president-Analects'>" + resultAnalects +"</div>"
                 var Message = "<div class='president-message pt-2'>" + resultMessage + "</div>"
                 var Caution = "<div class='" + prediction[0].className + "-president-caution pt-2 pb-2'>" + resultCaution + "</div>"
-                $('.result-message').html(title + Message + Caution);
+                $('.result-message').html(title + Analects + Message + Caution);
                 var barWidth;           
                 
 // 5개만 보이게 좀 해보자
