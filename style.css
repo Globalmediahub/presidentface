@@ -686,3 +686,8 @@ label {
         background-size : contain;
         background-position: center center;
       }
+
+.ad-banner{
+    width: 320px;
+    margin: 0 auto;
+}
