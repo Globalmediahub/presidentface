@@ -506,6 +506,10 @@ padding-right: 7.7%; */
     color: #3ba363;
     font-size: 1.2rem;
 }
+.YoonSY-president-Analects{
+    color: #F80808;
+    font-size: 1.4rem; 
+}
 
 
 .MoonJI-president-title {
@@ -514,8 +518,14 @@ padding-right: 7.7%; */
 .MoonJI-president-caution {
     color: #3ba363;
     font-size: 1.2rem;
-    
 }
+.MoonJI-president-Analects{
+    color: #F80808;
+    font-size: 1.4rem; 
+}
+
+
+
 .ParkKH-president-title {
     color: #ff6c0a;
 }
@@ -523,6 +533,11 @@ padding-right: 7.7%; */
     color: #ff6c0a;
     font-size: 1.2rem;
 }
+.ParkKH-president-Analects{
+    color: #F80808;
+    font-size: 1.4rem; 
+}
+
 
 .LeeMB-president-title {
     color: #548dd4;
@@ -531,6 +546,11 @@ padding-right: 7.7%; */
     color: #548dd4;
     font-size: 1.2rem;
 }
+.LeeMB-president-Analects{
+    color: #F80808;
+    font-size: 1.4rem; 
+}
+
 
 .NohMH-president-title {
     color: #e56995;
@@ -539,6 +559,11 @@ padding-right: 7.7%; */
     color: #e56995;
     font-size: 1.2rem;
 }
+.NohMH-president-Analects{
+    color: #F80808;
+    font-size: 1.4rem; 
+}
+
 
 .KimDJ-president-title {
     color: #9b6b43;
@@ -547,6 +572,11 @@ padding-right: 7.7%; */
     color: #9b6b43;
     font-size: 1.2rem;
 }
+.KimDJ-president-Analects{
+    color: #F80808;
+    font-size: 1.4rem; 
+}
+
 
 .KimYS-president-title {
     color: #31849b;
@@ -555,6 +585,11 @@ padding-right: 7.7%; */
     color: #31849b;
     font-size: 1.2rem;
 }
+.KimYS-president-Analects{
+    color: #F80808;
+    font-size: 1.4rem; 
+}
+
 
 .NohTW-president-title {
     color: #3ba363;
@@ -563,6 +598,11 @@ padding-right: 7.7%; */
     color: #3ba363;
     font-size: 1.2rem;
 }
+.NohTW-president-Analects{
+    color: #F80808;
+    font-size: 1.4rem; 
+}
+
 
 .JeonDH-president-title {
     color: #3ba363;
@@ -571,6 +611,12 @@ padding-right: 7.7%; */
     color: #3ba363;
     font-size: 1.2rem;
 }
+.JeonDH-president-Analects{
+    color: #F80808;
+    font-size: 1.4rem; 
+}
+
+
 
 .ChoiKH-president-title {
     color: #ff6c0a;
@@ -579,6 +625,11 @@ padding-right: 7.7%; */
     color: #ff6c0a;
     font-size: 1.2rem;
 }
+.ChoiKH-president-Analects{
+    color: #F80808;
+    font-size: 1.4rem; 
+}
+
 
 .ParkJH-president-title {
     color: #548dd4;
@@ -586,6 +637,10 @@ padding-right: 7.7%; */
 .ParkJH-president-caution {
     color: #548dd4;
     font-size: 1.2rem;
+}
+.ParkJH-president-Analects{
+    color: #F80808;
+    font-size: 1.4rem; 
 }
 
 .YoonBS-president-title {
@@ -595,6 +650,10 @@ padding-right: 7.7%; */
     color: #e56995;
     font-size: 1.2rem;
 }
+.YoonBS-president-Analects{
+    color: #F80808;
+    font-size: 1.4rem; 
+}
 
 .LeeSM-president-title {
     color: #9b6b43;
@@ -602,6 +661,10 @@ padding-right: 7.7%; */
 .LeeSM-president-caution {
     color: #9b6b43;
     font-size: 1.2rem;
+}
+.LeeSM-president-Analects{
+    color: #F80808;
+    font-size: 1.4rem; 
 }
 
 label {

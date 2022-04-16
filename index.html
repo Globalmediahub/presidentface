@@ -69,7 +69,7 @@
             
       
             <section class="section">
-            <h1 class="title">인공지능이 비교하는 나랑 닮은 대톨령 찾기</h1>
+            <h1 class="title">인공지능이 비교하는 나랑 닮은 대통령 찾기</h1>
             <h2 class="subtitle">결과에 너무 좌절하진 마세요 </h2>
             </section>
      
@@ -147,10 +147,10 @@
     </footer>
         
         
-        <!-- <div id="webcam-container"></div>
+        <!-- <div id="webcam-container"></div> -->
 
         <div id="label-container"></div>
-        <div id="disqus_thread"></div> -->
+        <div id="disqus_thread"></div> 
         
         <script>
             /**
@@ -293,91 +293,106 @@
                 
                 
                 
-                var resultTitle, resultMessage, resultCaution;
+                var resultAnalects, resultTitle, resultMessage, resultCaution;
                 switch (prediction[0].className) {
                     case 'YoonSY':
                         resultTitle = '20대 대통령 당선자 윤석열';
+                        resultAnalects = '대표 어록';
                         resultMessage =
-                            '어록 : 저는 사람에 충성하지 않기 때문에 제가 오늘도 이런 말씀을 드리는 겁니다. 검사가 수사권 가지고 보복하면 그게 깡패지, 검사입니까?';
+                            '저는 사람에 충성하지 않기 때문에 제가 오늘도 이런 말씀을 드리는 겁니다. 검사가 수사권 가지고 보복하면 그게 깡패지, 검사입니까?';
                         resultCaution = '김건희, 건진법사, 장모 최은순, 한동훈 등의 리스크 존재';
                         // code block
                         break;
                     case 'MoonJI':
                         resultTitle = '19대 대통령 문재인';
+                        resultAnalects = '대표 어록';
                         resultMessage =
-                            '어록 : 우리는 다시는 일본에게 지지 않을 것입니다. 과거에도 그래왔듯이 우리는 역경을 오히려 도약하는 기회로 만들어낼 것입니다.';
+                            '우리는 다시는 일본에게 지지 않을 것입니다. 과거에도 그래왔듯이 우리는 역경을 오히려 도약하는 기회로 만들어낼 것입니다.';
                         resultCaution = '검찰총장 임명을 잘못한 것이 가장 큰 실수';
                         break;
                     case 'ParkKH':
                         resultTitle = '18대 대통령 박근혜';
-                        resultMessage = '어록 : 저는 한마디로 통일은 대박이다 이렇게 생각을 합니다. 어둠을 탓하기보다는 촛불을 켜라.';
+                        resultAnalects = '대표 어록';
+                        resultMessage = '저는 한마디로 통일은 대박이다 이렇게 생각을 합니다. 어둠을 탓하기보다는 촛불을 켜라.';
                         resultCaution = '촛불을 켜라고 말이 씨가 되어 정말로 국민적 촛불이 켜졌음';
                         break;
                     case 'LeeMB':
                         resultTitle = '17대 대통령 이명박';
-                        resultMessage = '어록 : 뭐, 도곡동 땅이 어떻다고요? BBK가 어떻다요? 새빨간 거짓말입니다. 여러분. 저는 그런 삶을 살아오지 않았습니다.';
+                        resultAnalects = '대표 어록';
+                        resultMessage = '뭐, 도곡동 땅이 어떻다고요? BBK가 어떻다요? 새빨간 거짓말입니다. 여러분. 저는 그런 삶을 살아오지 않았습니다.';
                         resultCaution = '도곡동 땅, BBK 소유가 실제로 밝혀져 곤혹을 치르고 있음';
                         break;
                     case 'NohMH':
                         resultTitle = '16대 대통령 노무현';
-                        resultMessage = '어록 : 정치가 썩었다고 고개를 돌리지 마십시오. 낡은 정치를 새로운 정치로 바꾸는 힘은 국민 여러분에게 있습니다.';
+                        resultAnalects = '대표 어록';
+                        resultMessage = '정치가 썩었다고 고개를 돌리지 마십시오. 낡은 정치를 새로운 정치로 바꾸는 힘은 국민 여러분에게 있습니다.';
                         resultCaution = '삼가 고인의 명복을 빕니다.';
                         break;
                     case 'KimDJ':
                         resultTitle = '15대 대통령 김대중';
-                        resultMessage = '어록 : 전쟁은 40대 이상의 장년층이 일으키고, 전쟁터에서는 20대가 죽는다. 앞으로 전쟁이 일어나면 40대 이상을 전선으로 보내자.(노무현 대통령 추모 연설 중에서)';
+                        resultAnalects = '대표 어록';
+                        resultMessage = '전쟁은 40대 이상의 장년층이 일으키고, 전쟁터에서는 20대가 죽는다. 앞으로 전쟁이 일어나면 40대 이상을 전선으로 보내자.(노무현 대통령 추모 연설 중에서)';
                         resultCaution = '경기부양 방안으로 신용카드 활성화 정책시도, 결국은 카드대란 초래 ';
                         break;
 
                     case 'KimYS':
                         resultTitle = '14대 대통령 김영삼';
-                        resultMessage = '어록 : 아무리 닭의 목을 비틀지라도 새벽이 온다고 우리는 믿었습니다! (1979년 10월 4일, 국회의원 제명 직후)';
+                        resultAnalects = '대표 어록';
+                        resultMessage = '아무리 닭의 목을 비틀지라도 새벽이 온다고 우리는 믿었습니다! (1979년 10월 4일, 국회의원 제명 직후)';
                         resultCaution = '대한민국이 세계 부자 대열에 낄줄 알았지만 실상은 IMF';
                         break;
 
                     case 'NohTW':
                         resultTitle = '13대 대통령 노태우';
-                        resultMessage = '어록 : 대기업 위주로 경제를 운영하는 시대는 끝났다고 봅니다. 사실 대기업들은 정부지원을 많이 받았어요. 정부지원을 많이 받은 만큼 이를 사회에 환원시킬 시기가 아닌가 생각합니다. ' ;
+                        resultAnalects = '대표 어록';
+                        resultMessage = '대기업 위주로 경제를 운영하는 시대는 끝났다고 봅니다. 사실 대기업들은 정부지원을 많이 받았어요. 정부지원을 많이 받은 만큼 이를 사회에 환원시킬 시기가 아닌가 생각합니다. ' ;
                         resultCaution = '공식 추산된 국고 비자금 횡령 액수 : 2,628억원';
                         break;
 
                     case 'JeonDH':
                         resultTitle = '11~12대 대통령 전두환';
-                        resultMessage = '어록 : 돈을 받은 것은 사실이다. 내가 돈을 받지 않으니 기업인들이 되레 불안을 느꼈다. 기업인들은 내게 정치자금을 냄으로써 정치 안정에 기여하는 보람을 느꼈을 것이다. (1996년 2월 비자금 사건 첫 공판에서)';
+                        resultAnalects = '대표 어록';
+                        resultMessage = '돈을 받은 것은 사실이다. 내가 돈을 받지 않으니 기업인들이 되레 불안을 느꼈다. 기업인들은 내게 정치자금을 냄으로써 정치 안정에 기여하는 보람을 느꼈을 것이다. (1996년 2월 비자금 사건 첫 공판에서)';
                         resultCaution = '대한민국 헌정사에서 정통성 및 정당성이 가장 부족한 독재 정권';
                         break;
 
                     case 'ChoiKH':
-                        resultTitle = '10대 대통령 최규하';                        
-                        resultMessage = '어록 : 나만이라도 끝까지 연탄을 때겠다. (오일 파동 당시 장성탄광 시찰 후)';
+                        resultTitle = '10대 대통령 최규하';
+                        resultAnalects = '대표 어록';
+                        resultMessage = '나만이라도 끝까지 연탄을 때겠다. (오일 파동 당시 장성탄광 시찰 후)';
                         resultCaution = '대한민국 역사에서 가장 짧은 임기(8개월)를 지낸 대통령';
                         break;
 
                     case 'ParkJH':
                         resultTitle = '5~9대 대통령 박정희';
-                        resultMessage = '어록 : 바르게 알도록 하고, 바르게 판단하도록 하고, 바르게 행동하도록 하는 무거운 책임이 바로 우리 언론에 있는 것입니다.';
+                        resultAnalects = '대표 어록';
+                        resultMessage = '바르게 알도록 하고, 바르게 판단하도록 하고, 바르게 행동하도록 하는 무거운 책임이 바로 우리 언론에 있는 것입니다.';
                         resultCaution = '정권 연장을 위한 공포정치, 민주주의 파괴';
                         break;
 
                     case 'YoonBS':
                         resultTitle = '4대 대통령 윤보선';
-                        resultMessage = '어록 : 드디어 올것이 왔다! 5.16 쿠데타가 발생하자 윤보선대통령이 던진말로  4.19혁명이후에 당선된 문민 대통령이나, 후일 5.16쿠데타로 인해 대통령직에서 물러나게 된다';
+                        resultAnalects = '대표 어록';
+                        resultMessage = '드디어 올것이 왔다! 5.16 쿠데타가 발생하자 윤보선대통령이 던진말로  4.19혁명이후에 당선된 문민 대통령이나, 후일 5.16쿠데타로 인해 대통령직에서 물러나게 된다';
                         resultCaution = '경제적으로 무능하단 비판이 있으나, 존속 기간이 너무 짧아 평가 불가';
                         break;
 
                     case 'LeeSM':
                         resultTitle = '1~3대 대통령 이승만';
-                        resultMessage = '어록 : 모든 정치제도의 성패는 항상 그 나라 백성들의 수준에 달려있다. 굽어 자란 나뭇가지는 갑자기 펴지 못하고, 앉아서만 자란 아이는 하루에 멀리 가지 못한다.';
+                        resultAnalects = '대표 어록';
+                        resultMessage = '모든 정치제도의 성패는 항상 그 나라 백성들의 수준에 달려있다. 굽어 자란 나뭇가지는 갑자기 펴지 못하고, 앉아서만 자란 아이는 하루에 멀리 가지 못한다.';
                         resultCaution = '독립운동에 기여는 했으나, 친일파 청산을 방해 그 여파가 지금까지 ㅜ';
                         break;
 
                     default:
                         resultTitle = '알수없음';
+                        resultAnalects = '';
                         resultMessage ='';
                         resultCaution = '';
                 }
 
                 var title = "<div class='" + prediction[0].className +"-president-title'>" + resultTitle +"</div>"
+                var title = "<div class='" + prediction[0].className +"-president-Analects'>" + resultAnalects +"</div>"
                 var Message = "<div class='president-message pt-2'>" + resultMessage + "</div>"
                 var Caution = "<div class='" + prediction[0].className + "-president-caution pt-2 pb-2'>" + resultCaution + "</div>"
                 $('.result-message').html(title + Message + Caution);
